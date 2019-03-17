@@ -13,12 +13,12 @@
     {
       "id": 4,
       "title": "Other",
-      "value": 126701
+      "value": -126701
     },
     {
       "id": 5,
       "title": "Nevada",
-      "value": 243425
+      "value": -243425
     },
     {
       "id": 6,
@@ -33,7 +33,7 @@
     {
       "id": 8,
       "title": "Arizona",
-      "value": 2509503
+      "value": -2509503
     },
     {
       "id": 9,
@@ -43,12 +43,12 @@
     {
       "id": 10,
       "title": "California",
-      "value": 4026515
+      "value": -4026515
     },
     {
       "id": 11,
       "title": "Mexico",
-      "value": 1516688
+      "value": -1516688
     }
   ]
 }

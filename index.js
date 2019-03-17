@@ -44,13 +44,20 @@ draw_sankey = function(data) {
     .attr("height", (1.2*(graph_y[1] - graph_y[0])+100) + "px")
     .attr("transform", "translate(" + (-graph_x[0]+20) + "," + (-graph_y[0]+20) + ")")
   //link horizontal or vertical would be an option
-  var link = d3.linkVertical()
+  var link_vertical = d3.linkVertical()
     .x(function(d) {
       return d[0]
     })
     .y(function(d) {
       return d[1]
     });
+    var link_horizontal = d3.linkHorizontal()
+      .x(function(d) {
+        return d[0]
+      })
+      .y(function(d) {
+        return d[1]
+      });
   var data_extent = d3.extent(data.edges, function(d) {
     return Math.abs(d.value)
   });
@@ -69,6 +76,17 @@ draw_sankey = function(data) {
       var link_data = {
         source: [source.x, source.y],
         target: [target.x, target.y]
+      }
+      var link = link_horizontal;
+      if (target.x==source.x){
+        link=link_horizontal
+      } else {
+        slope=Math.abs((target.y-source.y)/(target.x-source.x));
+        if (slope > 1){
+          link=link_vertical;
+        } else{
+          link=link_horizontal;
+        }
       }
       return link(link_data)
     })
