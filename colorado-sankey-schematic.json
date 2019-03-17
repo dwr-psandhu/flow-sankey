@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": 2,
+      "title": "Lower Division States",
+      "x": 241,
+      "y": 257
+    },
+    {
+      "id": 3,
+      "title": "Junction 1",
+      "x": 522,
+      "y": 308
+    },
+    {
+      "id": 4,
+      "title": "Other",
+      "x": 757,
+      "y": 129
+    },
+    {
+      "id": 5,
+      "title": "Nevada",
+      "x": 930,
+      "y": 622
+    },
+    {
+      "id": 6,
+      "title": "Junction 2",
+      "x": 708,
+      "y": 339
+    },
+    {
+      "id": 7,
+      "title": "Junction 3",
+      "x": 929,
+      "y": 349
+    },
+    {
+      "id": 8,
+      "title": "Arizona",
+      "x": 1208,
+      "y": 180
+    },
+    {
+      "id": 9,
+      "title": "Junction 4",
+      "x": 1147,
+      "y": 404
+    },
+    {
+      "id": 10,
+      "title": "California",
+      "x": 1327,
+      "y": 374
+    },
+    {
+      "id": 11,
+      "title": "Mexico",
+      "x": 1322,
+      "y": 550
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 3,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 5
+    },
+    {
+      "source": 6,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 8
+    },
+    {
+      "source": 7,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 11
+    }
+  ]
+}

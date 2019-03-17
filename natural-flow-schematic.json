@@ -1,0 +1,329 @@
+{
+  "nodes": [{
+    "id": 2,
+    "title": "Upper Sacramento River",
+    "x": 590.4902954101562,
+    "y": 94.46808624267578
+  }, {
+    "id": 3,
+    "title": "Small watersheds (SRB)",
+    "x": 652.8898010253906,
+    "y": 319.1670227050781
+  }, {
+    "id": 4,
+    "title": "Sac westside minor streams",
+    "x": 676.0328979492188,
+    "y": 488.0415344238281
+  }, {
+    "id": 5,
+    "title": "Sac eastside minor streams",
+    "x": 196.17102146148682,
+    "y": 546.847412109375
+  }, {
+    "id": 6,
+    "title": "Stony Creek",
+    "x": 322.63055419921875,
+    "y": 815.1863403320312
+  }, {
+    "id": 7,
+    "title": "Feather river",
+    "x": 753.375,
+    "y": 851.6321411132812
+  }, {
+    "id": 8,
+    "title": "Yuba River",
+    "x": 807.4017333984375,
+    "y": 973.9112548828125
+  }, {
+    "id": 9,
+    "title": "Bear River",
+    "x": 764.4392700195312,
+    "y": 1140.2716064453125
+  }, {
+    "id": 10,
+    "title": "American river",
+    "x": 706.2191162109375,
+    "y": 1272.1033935546875
+  }, {
+    "id": 12,
+    "title": "Junction 10",
+    "x": 428.3568420410156,
+    "y": 1924.388916015625
+  }, {
+    "id": 13,
+    "title": "Junction 1",
+    "x": 515.8938903808594,
+    "y": 355.6089172363281
+  }, {
+    "id": 14,
+    "title": "Junction 4",
+    "x": 448.2939453125,
+    "y": 903.679931640625
+  }, {
+    "id": 15,
+    "title": "Junction 6",
+    "x": 449.9090270996094,
+    "y": 1103.055908203125
+  }, {
+    "id": 16,
+    "title": "Junction 7",
+    "x": 452.7405700683594,
+    "y": 1358.5223388671875
+  }, {
+    "id": 17,
+    "title": "Junction 8",
+    "x": 451.0038146972656,
+    "y": 1569.1112060546875
+  }, {
+    "id": 18,
+    "title": "Junction 9",
+    "x": 443.30621337890625,
+    "y": 1738.8310546875
+  }, {
+    "id": 19,
+    "title": "Cache Creek",
+    "x": 157.83920288085938,
+    "y": 1530.8641357421875
+  }, {
+    "id": 20,
+    "title": "Putah Creek",
+    "x": 138.66400146484375,
+    "y": 1688.8912353515625
+  }, {
+    "id": 21,
+    "title": "Junction 11",
+    "x": 454.2752990722656,
+    "y": 2093.835693359375
+  }, {
+    "id": 22,
+    "title": "Eastside streams",
+    "x": 718.2235717773438,
+    "y": 2213.80712890625
+  }, {
+    "id": 23,
+    "title": "Net Depletion (ESS)",
+    "x": 637.9767456054688,
+    "y": 1979.7772216796875
+  }, {
+    "id": 24,
+    "title": "Delta Outflow",
+    "x": 242.76041984558105,
+    "y": 2120.636962890625
+  }, {
+    "id": 25,
+    "title": "Tulare inflow",
+    "x": 258.1874694824219,
+    "y": 3579.5
+  }, {
+    "id": 26,
+    "title": "San Joaquin river at Millerton",
+    "x": 713.2400512695312,
+    "y": 3334.37109375
+  }, {
+    "id": 27,
+    "title": "Fresno River",
+    "x": 714.8343505859375,
+    "y": 3103.3818359375
+  }, {
+    "id": 28,
+    "title": "Chowchilla river",
+    "x": 751.627197265625,
+    "y": 2953.57470703125
+  }, {
+    "id": 29,
+    "title": "Merced river",
+    "x": 769.5567626953125,
+    "y": 2807.54345703125
+  }, {
+    "id": 30,
+    "title": "Tuolumne river",
+    "x": 782.5638427734375,
+    "y": 2649.990234375
+  }, {
+    "id": 31,
+    "title": "Stanislaus river",
+    "x": 768.9400634765625,
+    "y": 2506.785400390625
+  }, {
+    "id": 32,
+    "title": "Small watersheds (SJRB)",
+    "x": 739.9664306640625,
+    "y": 2359.672607421875
+  }, {
+    "id": 33,
+    "title": "Other minor creeks",
+    "x": 588.9174957275391,
+    "y": 2392.41064453125
+  }, {
+    "id": 34,
+    "title": "Net Depletion (SJRB)",
+    "x": 65.16109657287598,
+    "y": 2504.630615234375
+  }, {
+    "id": 35,
+    "title": "Net Depletion (Delta)",
+    "x": 234.77662801742554,
+    "y": 1965.6295166015625
+  }, {
+    "id": 36,
+    "title": "Total Delta Outflow",
+    "x": 96.74814224243164,
+    "y": 2221.203369140625
+  }, {
+    "id": 39,
+    "title": "Junction 5",
+    "x": 616.435302734375,
+    "y": 1034.2603759765625
+  }, {
+    "id": 40,
+    "title": "Junction 2",
+    "x": 489.1444091796875,
+    "y": 546.9177856445312
+  }, {
+    "id": 41,
+    "title": "Junction 3",
+    "x": 473.38458251953125,
+    "y": 722.7005004882812
+  }, {
+    "id": 42,
+    "title": "Junction 20",
+    "x": 409.7196502685547,
+    "y": 2926.161865234375
+  }, {
+    "id": 43,
+    "title": "Junction 21",
+    "x": 392.3874969482422,
+    "y": 2521.55810546875
+  }, {
+    "id": 44,
+    "title": "Junction 22",
+    "x": 399.7750244140625,
+    "y": 2258.639892578125
+  }, {
+    "id": 46,
+    "title": "Net Depletion SRB",
+    "x": 257.7559814453125,
+    "y": 1214.9774169921875
+  }],
+  "edges": [{
+    "source": 3,
+    "target": 13
+  }, {
+    "source": 6,
+    "target": 14
+  }, {
+    "source": 14,
+    "target": 15
+  }, {
+    "source": 15,
+    "target": 16
+  }, {
+    "source": 16,
+    "target": 17
+  }, {
+    "source": 17,
+    "target": 18
+  }, {
+    "source": 18,
+    "target": 12
+  }, {
+    "source": 22,
+    "target": 21
+  }, {
+    "source": 21,
+    "target": 23
+  }, {
+    "source": 7,
+    "target": 39
+  }, {
+    "source": 8,
+    "target": 39
+  }, {
+    "source": 9,
+    "target": 39
+  }, {
+    "source": 39,
+    "target": 15
+  }, {
+    "source": 2,
+    "target": 13
+  }, {
+    "source": 4,
+    "target": 40
+  }, {
+    "source": 13,
+    "target": 40
+  }, {
+    "source": 40,
+    "target": 41
+  }, {
+    "source": 5,
+    "target": 41
+  }, {
+    "source": 41,
+    "target": 14
+  }, {
+    "source": 10,
+    "target": 16
+  }, {
+    "source": 19,
+    "target": 18
+  }, {
+    "source": 20,
+    "target": 18
+  }, {
+    "source": 25,
+    "target": 42
+  }, {
+    "source": 26,
+    "target": 42
+  }, {
+    "source": 27,
+    "target": 42
+  }, {
+    "source": 28,
+    "target": 42
+  }, {
+    "source": 29,
+    "target": 42
+  }, {
+    "source": 30,
+    "target": 42
+  }, {
+    "source": 31,
+    "target": 42
+  }, {
+    "source": 42,
+    "target": 43
+  }, {
+    "source": 43,
+    "target": 44
+  }, {
+    "source": 32,
+    "target": 42
+  }, {
+    "source": 33,
+    "target": 43
+  }, {
+    "source": 44,
+    "target": 34
+  }, {
+    "source": 21,
+    "target": 24
+  }, {
+    "source": 44,
+    "target": 24
+  }, {
+    "source": 12,
+    "target": 24
+  }, {
+    "source": 24,
+    "target": 36
+  }, {
+    "source": 24,
+    "target": 35
+  }, {
+    "source": 16,
+    "target": 46
+  }]
+}

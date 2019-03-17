@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <script type="text/javascript" src="./node_modules/d3/dist/d3.js"></script>
+</head>
+
+<body>
+  <h1>2017 Deliveries on the Colorado River System</h1>
+  <div>
+    <a href="https://www.usbr.gov/lc/region/g4000/4200Rpts/DecreeRpt/2017/2017.pdf">2017 Deliveries Report</a>
+  </div>
+  <div>
+  </div>
+  <div>
+    <h2>Sankey Flow Diagram for the Colorado River System</h2>
+    <svg></svg>
+  </div>
+</body>
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript">
+  window.onload = function() {
+    combine_schematic_with_data("colorado-sankey-schematic.json", "colorado-sankey-data.json", draw_sankey);
+  }
+</script>
+
+</html>
