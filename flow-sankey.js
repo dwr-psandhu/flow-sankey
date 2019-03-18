@@ -43,6 +43,13 @@ draw_sankey = function(data) {
     .attr("width", (1.2 * (graph_x[1] - graph_x[0]) + 100) + "px")
     .attr("height", (1.2 * (graph_y[1] - graph_y[0]) + 100) + "px")
     .attr("transform", "translate(" + (-graph_x[0] + 20) + "," + (-graph_y[0] + 20) + ")")
+  d3.select('svg').append("defs")
+  .append("marker").attr("id","arrow").attr("orient","auto")
+  .attr("markerWidth",1).attr("markerHeight",1)
+  .attr("viewBox","-3 -3 6 6")
+  .attr("refX",3).attr("refY",1)
+  .append("polygon").attr("points","-1,0 -3,3 3,0 -3,-3")
+  .style("fill","royalblue")
   //link horizontal or vertical would be an option
   var link_vertical = d3.linkVertical()
     .x(function(d) {
@@ -64,7 +71,7 @@ draw_sankey = function(data) {
   var scale = d3.scaleLinear()
     .domain(data_extent).range([2, 100]);
   // The flow paths themselves
-  d3.select('svg').append('g').selectAll('path').data(data.edges)
+  var edgelines = d3.select('svg').append('g').selectAll('path').data(data.edges)
     .enter().append('path')
     .attr('id', function(d, i) {
       return "edge" + i
@@ -99,6 +106,7 @@ draw_sankey = function(data) {
       return edge.value < 0 ? "red" : "royalblue";
     })
     .style("stroke-opacity", "0.67")
+    .style("marker-end", "url(#arrow)")
     .append("svg:title").text(function(edge) {
       return d3.format("0.1f")(edge.value) + " TAF";
     });
