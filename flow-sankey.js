@@ -15,7 +15,7 @@ combine_schematic_with_data = function(schematic_url, data_url, dothis) {
       schematic.edges.forEach(function(d) {
         source_value = datamap.get(d.source).value
         target_value = datamap.get(d.target).value
-        if (source_value > 0 && target_value > 0){
+        if (source_value > 0 && target_value > 0) {
           d.value = source_value;
         } else {
           d.value = target_value;
@@ -40,9 +40,9 @@ draw_sankey = function(data) {
   });
 
   d3.select('svg')
-    .attr("width", (1.2*(graph_x[1] - graph_x[0])+100) + "px")
-    .attr("height", (1.2*(graph_y[1] - graph_y[0])+100) + "px")
-    .attr("transform", "translate(" + (-graph_x[0]+20) + "," + (-graph_y[0]+20) + ")")
+    .attr("width", (1.2 * (graph_x[1] - graph_x[0]) + 100) + "px")
+    .attr("height", (1.2 * (graph_y[1] - graph_y[0]) + 100) + "px")
+    .attr("transform", "translate(" + (-graph_x[0] + 20) + "," + (-graph_y[0] + 20) + ")")
   //link horizontal or vertical would be an option
   var link_vertical = d3.linkVertical()
     .x(function(d) {
@@ -51,13 +51,13 @@ draw_sankey = function(data) {
     .y(function(d) {
       return d[1]
     });
-    var link_horizontal = d3.linkHorizontal()
-      .x(function(d) {
-        return d[0]
-      })
-      .y(function(d) {
-        return d[1]
-      });
+  var link_horizontal = d3.linkHorizontal()
+    .x(function(d) {
+      return d[0]
+    })
+    .y(function(d) {
+      return d[1]
+    });
   var data_extent = d3.extent(data.edges, function(d) {
     return Math.abs(d.value)
   });
@@ -78,21 +78,21 @@ draw_sankey = function(data) {
         target: [target.x, target.y]
       }
       var link = link_horizontal;
-      if (target.x==source.x){
-        link=link_horizontal
+      if (target.x == source.x) {
+        link = link_horizontal
       } else {
-        slope=Math.abs((target.y-source.y)/(target.x-source.x));
-        if (slope > 1){
-          link=link_vertical;
-        } else{
-          link=link_horizontal;
+        slope = Math.abs((target.y - source.y) / (target.x - source.x));
+        if (slope > 1) {
+          link = link_vertical;
+        } else {
+          link = link_horizontal;
         }
       }
       return link(link_data)
     })
     .style("stroke-width",
       function(edge) {
-        return Math.round(scale(Math.abs(edge.value)))+ "px";
+        return Math.round(scale(Math.abs(edge.value))) + "px";
       })
     .style("fill", "none")
     .style("stroke", function(edge) {
@@ -103,34 +103,40 @@ draw_sankey = function(data) {
       return d3.format("0.1f")(edge.value) + " TAF";
     });
   // Text along the path
-  /*
   d3.select('svg').append('g').selectAll("text").data(data.edges)
     .enter()
-    .append('text').append('textPath')
+    .append('text')
+    .style('fill','black')
+    .attr('transform', function(edge) {
+      var source = nodemap.get(edge.source)
+      var target = nodemap.get(edge.target)
+      line_angle = Math.atan2(target.y - source.y, target.x - source.x)
+      line_angle = line_angle * 180 / Math.PI
+      if (Math.abs(line_angle) > 90) {
+        angle = 180
+      } else {
+        angle = 0
+      }
+      cx = target.x + source.x
+      cx = cx / 2
+      cy = target.y + source.y
+      cy = cy / 2
+      var translate = Math.round(scale(Math.abs(edge.value)))/2+2;
+      var xt=Math.cos(line_angle)*translate
+      var yt=Math.sin(line_angle)*translate
+      return 'rotate(' + angle + ',' + cx + ',' + cy + ')';
+        //+ ' ' + 'translate('+xt+','+yt+')'
+    })
+    .append('textPath')
     .attr('xlink:href', function(d, i) {
       return '#edge' + i
     })
-    .attr('transform', function(edge){
-      var source = nodemap.get(edge.source)
-      var target = nodemap.get(edge.target)
-      angle = 0
-      if (target.x < source.x || target.y > source.y){
-        angle=180
-      }
-      cx=target.x+source.x
-      cx=cx/2
-      cy=target.y+source.y
-      cy=cy/2
-      return 'rotate('+angle+','+cx+','+cy+')'
-    })
     .attr('startOffset', '50%')
-    .attr('side','left')
+    .attr('side', 'left')
     .style('text-anchor', 'middle')
     .text(function(edge) {
-      var source = nodemap.get(edge.source);
-      return d3.format("0.1f")(source.value) + " TAF";
+      return d3.format("0.1f")(edge.value) + " TAF";
     })
-    */
   // -- Text for the important end and starting nodes
   filtered_nodes =
     data.nodes.filter(function(d) {
