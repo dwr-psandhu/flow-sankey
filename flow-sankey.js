@@ -9,17 +9,14 @@ combine_schematic_with_data = function(schematic_url, data_url, dothis) {
     schematic = d;
     d3.json(data_url).then(function(d) {
       data = d;
-      datamap = d3.map(data.nodevalues, function(d) {
+      datamap = d3.map(data.edgevalues, function(d) {
         return d.id
       });
       schematic.edges.forEach(function(d) {
-        source_value = datamap.get(d.source).value
-        target_value = datamap.get(d.target).value
-        if (source_value > 0 && target_value > 0) {
-          d.value = source_value;
-        } else {
-          d.value = target_value;
+        if (typeof datamap.get(d.id) === "undefined"){
+          console.log("Undefined id: "+d.id+" in data.json");
         }
+        d.value = datamap.get(d.id).value
       });
       dothis(schematic);
     })
@@ -46,10 +43,11 @@ draw_sankey = function(data) {
   d3.select('svg').append("defs")
   .append("marker").attr("id","arrow").attr("orient","auto")
   .attr("markerWidth",1).attr("markerHeight",1)
-  .attr("viewBox","-3 -3 6 6")
-  .attr("refX",3).attr("refY",1)
-  .append("polygon").attr("points","-1,0 -3,3 3,0 -3,-3")
-  .style("fill","royalblue")
+  .attr("viewBox","-1 -1 2 2")
+  .attr("refX",-1).attr("refY",0)
+  .append("polygon").attr("points","-1,0 -1,1 1,0 -1,-1")
+  .style("fill","black")
+  .style("opacity","0.25")
   //link horizontal or vertical would be an option
   var link_vertical = d3.linkVertical()
     .x(function(d) {
@@ -106,7 +104,8 @@ draw_sankey = function(data) {
       return edge.value < 0 ? "red" : "royalblue";
     })
     .style("stroke-opacity", "0.67")
-    .style("marker-end", "url(#arrow)")
+    .style("marker-start", function(edge){ return edge.value > 0 ? "url(#arrow)" :""})
+    .style("marker-end", function(edge){ return edge.value < 0 ? "url(#arrow)" :""})
     .append("svg:title").text(function(edge) {
       return d3.format("0.1f")(edge.value) + " TAF";
     });
@@ -129,10 +128,10 @@ draw_sankey = function(data) {
       cx = cx / 2
       cy = target.y + source.y
       cy = cy / 2
-      var translate = Math.round(scale(Math.abs(edge.value)))/2+2;
-      var xt=Math.cos(line_angle)*translate
-      var yt=Math.sin(line_angle)*translate
-      return 'rotate(' + angle + ',' + cx + ',' + cy + ')';
+      var translate = Math.round(scale(Math.abs(edge.value)))/2;
+      var yt=Math.cos(line_angle)*translate
+      var xt=Math.sin(line_angle)*translate
+      return 'rotate(' + angle + ',' + cx + ',' + cy + ')'
         //+ ' ' + 'translate('+xt+','+yt+')'
     })
     .append('textPath')
@@ -161,4 +160,5 @@ draw_sankey = function(data) {
     .text(function(d) {
       return d.title
     })
+    .style("font","bold 16px sans-serif")
 }

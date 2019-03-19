@@ -1,52 +1,42 @@
 {
-  "nodevalues": [
+  "edgevalues": [
     {
-      "id": 2,
-      "title": "Lower Division States",
+      "id": 1,
       "value": 8422832
     },
     {
+      "id": 2,
+      "value": -126701
+    },
+    {
       "id": 3,
-      "title": "Junction 1",
       "value": 8296131
     },
     {
       "id": 4,
-      "title": "Other",
-      "value": -126701
-    },
-    {
-      "id": 5,
-      "title": "Nevada",
       "value": -243425
     },
     {
+      "id": 5,
+      "value": 8052706
+    },
+    {
       "id": 6,
-      "title": "Junction 2",
-      "value": 8052706
-    },
-    {
-      "id": 7,
-      "title": "Junction 3",
-      "value": 8052706
-    },
-    {
-      "id": 8,
       "title": "Arizona",
       "value": -2509503
     },
     {
-      "id": 9,
+      "id": 7,
       "title": "Junction 4",
       "value": 5543203
     },
     {
-      "id": 10,
+      "id": 8,
       "title": "California",
       "value": -4026515
     },
     {
-      "id": 11,
+      "id": 9,
       "title": "Mexico",
       "value": -1516688
     }
